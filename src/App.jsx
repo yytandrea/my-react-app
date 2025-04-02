@@ -3,13 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-export function App() {
+/*export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <h1> hi</h1>
-      <Square/>
+      <Board/>
 
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -33,11 +33,25 @@ export function App() {
       </p>
     </>
   )
-}
+}*/
 //export default App
 
 function Square({value}){
-  return <button className="square">{value}</button>
+  //return <button className="square">{value}</button>
+
+  function handleClick() {
+    console.log('clicked!');
+  }
+
+  return (
+    <button
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
+
 }
 
 
